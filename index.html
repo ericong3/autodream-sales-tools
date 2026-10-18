@@ -26,7 +26,11 @@ img{max-width:100%;border-radius:10px;margin:8px 0}
 <li><a href="paint-studio/?paint=ak-srp7000&light=studio&view=front34">SRP70-00 Psychedelic Black, studio</a></li>
 <li><a href="paint-studio/?paint=ak-1091g&light=studio&view=side">1091G Metallic Silver, studio, side</a></li>
 </ul>
-<p class="warn">URL parameters: <code>paint</code> (e.g. ak-spc8001), <code>light</code> (studio, showroom, booth, sun, overcast, dusk), <code>view</code> (front34, side, rear34, top, panel). This build still uses the OLD paint model; the new physically based model below is not in it yet.</p>
+<p><b>New physics paint model (test):</b> <a href="paint-studio/?model=v3&paint=ak-spc8001&light=studio&view=front34">SPC80-01 in v3</a> ·
+<a href="paint-studio/?abmodels=1&paint=ak-spc8001&light=studio&view=front34">old vs new side by side</a> ·
+<a href="paint-studio/?model=v3&paint=ak-1091g&light=sun&view=side">Metallic Silver in sun, v3</a>.
+In the app: <b>M</b> = switch old/new model, <b>Q</b> = quality (64/128/256/512 samples), <b>F</b> = frame rate.</p>
+<p class="warn">URL parameters: <code>model</code> (v3), <code>abmodels</code> (1 = old left, new right), <code>quality</code> (preview, balanced, high, reference), <code>paint</code> (e.g. ak-spc8001), <code>light</code> (studio, showroom, booth, sun, overcast, dusk), <code>view</code> (front34, side, rear34, top, panel). Default is the old model; add <code>model=v3</code> for the new physically based model (rainbow / Super Star finishes still old). No sun shadows on v3 paint yet.</p>
 </div>
 
 <div class="card">
