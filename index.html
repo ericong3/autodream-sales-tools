@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Autodream Sales Tools — test previews</title>
+<style>
+:root{--bg:#0b0c0e;--fg:#e9e6df;--muted:#9a978f;--gold:#d8b45a;--card:#15171a}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--bg:#f6f4ef;--fg:#1b1b1b;--muted:#5d5b56;--gold:#9a7420;--card:#fff}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:40px 16px}
+h1{font-weight:300;letter-spacing:.12em;margin:0 0 4px}h1 b{color:var(--gold);font-weight:600}
+.sub{color:var(--muted);margin:0 0 28px}
+.card{background:var(--card);border-radius:14px;padding:20px 22px;margin:16px 0;border:1px solid #ffffff14}
+a{color:var(--gold)} code{background:#ffffff12;padding:1px 6px;border-radius:5px;font-size:.9em}
+img{max-width:100%;border-radius:10px;margin:8px 0}
+.warn{color:var(--muted);font-size:.92em}
+</style></head><body><main>
+<h1>AUTODREAM <b>GARAGE</b></h1>
+<p class="sub">Sales tools — internal test previews. Not for customers. Colours: AIKKA catalogue, used for internal evaluation.</p>
+
+<div class="card">
+<h2>Paint Studio (test build)</h2>
+<p><a href="paint-studio/">Open Paint Studio</a> — 3D AIKKA colour preview. Needs a desktop browser with WebGL; first load is about 21 MB.</p>
+<p>Open a specific state directly:</p>
+<ul>
+<li><a href="paint-studio/?paint=ak-spc8001&light=sun&view=side">SPC80-01 chameleon, sun, side</a></li>
+<li><a href="paint-studio/?paint=ak-srp7000&light=studio&view=front34">SRP70-00 Psychedelic Black, studio</a></li>
+<li><a href="paint-studio/?paint=ak-1091g&light=studio&view=side">1091G Metallic Silver, studio, side</a></li>
+</ul>
+<p class="warn">URL parameters: <code>paint</code> (e.g. ak-spc8001), <code>light</code> (studio, showroom, booth, sun, overcast, dusk), <code>view</code> (front34, side, rear34, top, panel). This build still uses the OLD paint model; the new physically based model below is not in it yet.</p>
+</div>
+
+<div class="card">
+<h2>Physics lab — new paint model (work in progress)</h2>
+<p>Reference renderer: clear coat, flakes inside the coat (thin-film / multilayer optics), and base coat. A fast real-time version is being validated against it before going into the app.</p>
+<img src="physics-lab/chameleon-reference.png" alt="Chameleon reference renders: softbox, rotated softbox, sun, rotated sun, uniform light">
+<p class="warn">Chameleon reference: the colour follows the light (rot60 = light turned 60°).</p>
+<img src="physics-lab/chameleon-ref-vs-realtime.png" alt="Reference vs real-time candidates and error map">
+<p class="warn">Rows: softbox, rotated softbox, two lights. Columns: reference, split-sum (rejected), filtered importance sampling (candidate), error ×3.</p>
+<img src="physics-lab/metallic-pearl-reference.png" alt="Silver metallic and white pearl reference renders">
+</div>
+</main></body></html>
