@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paint Studio – Blind Test</title>
+<style>
+  :root { --bg: #111317; --card: #1b1e24; --fg: #e9ebee; --muted: #9aa1ab; --accent: #e23b3b; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 system-ui, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 22px; margin: 0 0 6px; }
+  p { color: var(--muted); margin: 0 0 18px; }
+  section { background: var(--card); border-radius: 12px; padding: 16px; margin: 0 0 16px; }
+  h2 { font-size: 17px; margin: 0 0 10px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; }
+  a.btn { flex: 1 1 140px; text-align: center; padding: 14px 10px; border-radius: 10px; background: #262a32; color: var(--fg); text-decoration: none; font-weight: 600; font-size: 18px; }
+  a.btn:hover { background: var(--accent); }
+  ol { color: var(--muted); padding-left: 20px; margin: 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Paint Studio – Blind Test</h1>
+  <p>Same car, same paint code, different versions. Open each one full-screen, rotate the car, and switch lighting with the app's own buttons (Workshop, Sunlight, Overcast). Then tell Claude which letter looks most like the real car.</p>
+
+  <section>
+    <h2>1091G Silver</h2>
+    <div class="row">
+      <a class="btn" target="_blank" href="v1.html?model=v3&cand=m&paint=ak-1091g&light=sun">X</a>
+      <a class="btn" target="_blank" href="v2.html?model=v3&cand=m&paint=ak-1091g&light=sun&silv=c">Y</a>
+      <a class="btn" target="_blank" href="v2.html?model=v3&cand=m&paint=ak-1091g&light=sun">Z</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>MT37 Blue</h2>
+    <div class="row">
+      <a class="btn" target="_blank" href="v2.html?model=v3&cand=m&paint=ak-mt37&light=sun">X</a>
+      <a class="btn" target="_blank" href="v1.html?model=v3&cand=m&paint=ak-mt37&light=sun">Y</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>What to look at</h2>
+    <ol>
+      <li>Does the colour look like the real paint on a real car?</li>
+      <li>As you rotate: does the silver go bright and dark like real metallic, or stay flat like primer?</li>
+      <li>In Sunlight and Overcast: does the scene look like a real outdoor place?</li>
+    </ol>
+  </section>
+</main>
+</body>
+</html>
